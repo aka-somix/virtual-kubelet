@@ -293,6 +293,12 @@ func (p *MockProvider) RunInContainer(ctx context.Context, namespace, name, cont
 	return nil
 }
 
+// TODO complete comment here
+func (p *MockProvider) AttachToContainer(ctx context.Context, namespace, name, container string, attach api.AttachIO) error {
+	log.G(context.TODO()).Infof("receive AttachToContainer %q", container)
+	return nil
+}
+
 // GetPodStatus returns the status of a pod by name that is "running".
 // returns nil if a pod by that name is not found.
 func (p *MockProvider) GetPodStatus(ctx context.Context, namespace, name string) (*v1.PodStatus, error) {

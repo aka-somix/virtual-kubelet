@@ -76,7 +76,7 @@ func AttachProviderRoutes(mux api.ServeMux) NodeOpt {
 				GetMetricsResource:    p.GetMetricsResource,
 				StreamIdleTimeout:     cfg.StreamIdleTimeout,
 				StreamCreationTimeout: cfg.StreamCreationTimeout,
-				PortForward:      p.PortForward,
+				PortForward:           p.PortForward,
 			}, true))
 		}
 		return nil
